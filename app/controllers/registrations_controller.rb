@@ -1,7 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  protected
-
+  protecte
+  beofre_action :euthenticate_user!
   def update_resource(resource, params)
     resource.update_without_current_password(params)
   end
